@@ -1,0 +1,81 @@
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    height: 450px;
+    border: 5px solid rgb(192, 253, 49);
+}
+
+.game {
+    background: url('img/desert.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 449px;
+}
+
+#dino {
+    width: 160px;
+    height: 116px;
+    background: url(img/dino.png) 0px 0px;
+    animation: play 0.7s steps(8) infinite;
+    position: relative;
+    top: 250px;
+}
+
+#dino.jump {
+    animation: jump-animation 0.5s linear;
+}
+
+@keyframes play {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -1344px;
+    }
+}
+
+@keyframes jump-animation {
+    0% {
+        top: 250px;
+    }
+
+    30% {
+        top: 180px;
+    }
+
+    50% {
+        top: 140px;
+    }
+
+    80% {
+        top: 180px;
+    }
+
+    100% {
+        top: 250px;
+    }
+}
+
+#cactus {
+    width: 80px;
+    height: 80px;
+    background: url(img/cactus.png) 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 171px;
+    left: 900px;
+    animation: barrierMove 2s linear;
+    animation-iteration-count: 50;
+}
+
+@keyframes barrierMove {
+    0% {
+        left: 900px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
