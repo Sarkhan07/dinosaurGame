@@ -40,16 +40,24 @@
         top: 250px;
     }
 
+    15% {
+        top: 215px;
+    }
+
     30% {
-        top: 180px;
+        top: 170px;
     }
 
     50% {
-        top: 140px;
+        top: 120px;
     }
 
-    80% {
-        top: 180px;
+    75% {
+        top: 170px;
+    }
+
+    90% {
+        top: 215px;
     }
 
     100% {
@@ -58,13 +66,13 @@
 }
 
 #cactus {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 170px;
     background: url(img/cactus.png) 0px 0px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 58px;
     position: relative;
-    top: 171px;
+    top: 148px;
     left: 900px;
     animation: barrierMove 2s linear;
     animation-iteration-count: 50;

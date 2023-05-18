@@ -37,9 +37,11 @@ let isAlive = setInterval(function () {
         window.getComputedStyle(cactus).getPropertyValue('left')
     );
 
+    console.log(dinoTop, barrierLeft);
+
     // let time = window.getComputedStyle(barrier).animationIterationCount;
 
-    if (barrierLeft < 120 && barrierLeft > 0 && dinoTop >= 250) {
+    if (barrierLeft < 88 && barrierLeft > 0 && dinoTop >= 250) {
         alert('Game over!!!');
         // time = 50;
     }
