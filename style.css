@@ -1,15 +1,53 @@
 .wrapper {
     width: 1000px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    height: 450px;
     border: 5px solid rgb(192, 253, 49);
 }
 
+.sky {
+    background: url('img/cloud.png');
+    background-repeat: repeat;
+    background-size: cover;
+    height: 400px;
+    width: 1000px;
+    animation: skyMove 10s linear infinite;
+    filter: blur(6px);
+
+}
+
+
+@keyframes skyMove {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+
 .game {
     background: url('img/desert.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
-    height: 449px;
+    height: 200px;
+    width: 1000px;
+    animation: fieldMove 2s linear infinite;
+    filter: blur(0.5px);
+}
+
+
+@keyframes fieldMove {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -1344px;
+    }
 }
 
 #dino {
@@ -18,7 +56,7 @@
     background: url(img/dino.png) 0px 0px;
     animation: play 0.7s steps(8) infinite;
     position: relative;
-    top: 250px;
+    top: 50px;
 }
 
 #dino.jump {
@@ -37,31 +75,31 @@
 
 @keyframes jump-animation {
     0% {
-        top: 250px;
+        top: 50px;
     }
 
     15% {
-        top: 215px;
+        top: 15px;
     }
 
     30% {
-        top: 170px;
+        top: -30px;
     }
 
     50% {
-        top: 120px;
+        top: -80px;
     }
 
     75% {
-        top: 170px;
+        top: -30px;
     }
 
     90% {
-        top: 215px;
+        top: 15px;
     }
 
     100% {
-        top: 250px;
+        top: 50px;
     }
 }
 
@@ -72,15 +110,15 @@
     background-repeat: no-repeat;
     background-size: 58px;
     position: relative;
-    top: 148px;
-    left: 900px;
+    top: -50px;
+    left: 948px;
     animation: barrierMove 2s linear;
-    animation-iteration-count: 50;
+    animation-iteration-count: infinite;
 }
 
 @keyframes barrierMove {
     0% {
-        left: 900px;
+        left: 948px;
     }
 
     100% {

@@ -41,7 +41,7 @@ let isAlive = setInterval(function () {
 
     // let time = window.getComputedStyle(barrier).animationIterationCount;
 
-    if (barrierLeft < 88 && barrierLeft > 0 && dinoTop >= 250) {
+    if (barrierLeft < 100 && barrierLeft > 0 && dinoTop >= 50) {
         alert('Game over!!!');
         // time = 50;
     }
